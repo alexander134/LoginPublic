@@ -50,6 +50,7 @@ public class Usuario {
 	private String telefono;
 
 	@ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+	//@ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
 	@JoinTable(name = "usuarios_roles",joinColumns = @JoinColumn(name = "usuario_id",referencedColumnName = "id"),inverseJoinColumns = @JoinColumn(name = "rol_id",referencedColumnName = "id"))
 	private Set<Rol> roles = new HashSet<>();
 

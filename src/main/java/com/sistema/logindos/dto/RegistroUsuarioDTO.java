@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class RegistroUsuarioDTO {
 
+	private Long id;
 	private String email;
 	private String nombre;
 	private String username;
@@ -18,6 +19,14 @@ public class RegistroUsuarioDTO {
 	private String respSecreta;
 	private String telefono;
 	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getEmail() {
 		return email;
