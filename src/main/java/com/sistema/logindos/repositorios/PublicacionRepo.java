@@ -7,5 +7,7 @@ import com.sistema.logindos.entidades.Publicacion;
 import java.util.List;
 
 public interface PublicacionRepo extends JpaRepository<Publicacion, Long>{
+	
+	Publicacion findTopByOrderByIdDesc();
 	//public List<Publicacion> findByUsuarioId(Long usuarioId);
 }

@@ -9,4 +9,5 @@ import com.sistema.logindos.entidades.Rol;
 public interface RolRepo extends JpaRepository<Rol, Long>{
 
 	public Optional<Rol> findByNombre(String nombre);
+	Rol findTopByOrderByIdDesc();
 }

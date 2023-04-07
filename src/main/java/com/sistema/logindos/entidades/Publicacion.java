@@ -45,6 +45,15 @@ public class Publicacion {
 		this.contenido = contenido;
 		this.comentarios = comentarios;
 	}
+	
+
+	public Publicacion(String titulo, String descripcion, String contenido, Set<Comentario> comentarios) {
+		super();
+		this.titulo = titulo;
+		this.descripcion = descripcion;
+		this.contenido = contenido;
+		this.comentarios = comentarios;
+	}
 
 	public Long getId() {
 		return id;
@@ -84,6 +93,12 @@ public class Publicacion {
 
 	public void setComentarios(Set<Comentario> comentarios) {
 		this.comentarios = comentarios;
+	}
+
+	@Override
+	public String toString() {
+		return "Publicacion [id=" + id + ", titulo=" + titulo + ", descripcion=" + descripcion + ", contenido="
+				+ contenido + ", comentarios=[...]]";
 	}
 	
 }

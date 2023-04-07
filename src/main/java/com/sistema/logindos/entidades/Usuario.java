@@ -54,6 +54,53 @@ public class Usuario {
 	@JoinTable(name = "usuarios_roles",joinColumns = @JoinColumn(name = "usuario_id",referencedColumnName = "id"),inverseJoinColumns = @JoinColumn(name = "rol_id",referencedColumnName = "id"))
 	private Set<Rol> roles = new HashSet<>();
 
+	
+	
+	public Usuario(String username, String nombre, String segundoNombre, String apm, String app, String email,
+			Date fechaRegistro, String pass, String emailSegundario, String preguntaSecreta, String respSecreta,
+			String telefono, Set<Rol> roles) {
+		super();
+		this.username = username;
+		this.nombre = nombre;
+		this.segundoNombre = segundoNombre;
+		this.apm = apm;
+		this.app = app;
+		this.email = email;
+		this.fechaRegistro = fechaRegistro;
+		this.pass = pass;
+		this.emailSegundario = emailSegundario;
+		this.preguntaSecreta = preguntaSecreta;
+		this.respSecreta = respSecreta;
+		this.telefono = telefono;
+		this.roles = roles;
+	}
+	
+	
+
+	public Usuario(Long id, String username, String nombre, String segundoNombre, String apm, String app, String email,
+			Date fechaRegistro, String pass, String emailSegundario, String preguntaSecreta, String respSecreta,
+			String telefono, Set<Rol> roles) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.nombre = nombre;
+		this.segundoNombre = segundoNombre;
+		this.apm = apm;
+		this.app = app;
+		this.email = email;
+		this.fechaRegistro = fechaRegistro;
+		this.pass = pass;
+		this.emailSegundario = emailSegundario;
+		this.preguntaSecreta = preguntaSecreta;
+		this.respSecreta = respSecreta;
+		this.telefono = telefono;
+		this.roles = roles;
+	}
+
+	public Usuario() {
+		super();
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -164,6 +211,17 @@ public class Usuario {
 
 	public void setRoles(Set<Rol> roles) {
 		this.roles = roles;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", username=" + username + ", nombre=" + nombre + ", segundoNombre="
+				+ segundoNombre + ", apm=" + apm + ", app=" + app + ", email=" + email + ", fechaRegistro="
+				+ fechaRegistro + ", pass=" + pass + ", emailSegundario=" + emailSegundario + ", preguntaSecreta="
+				+ preguntaSecreta + ", respSecreta=" + respSecreta + ", telefono=" + telefono + ", roles=" + roles
+				+ "]";
 	}
 	
 	
