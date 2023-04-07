@@ -14,7 +14,8 @@ create database sistema_login_user4
 Luego correr la aplicación de springboot para que cree todas las tablas necesarias para funcionar.
 
 realice esta insert para que puede utilizar los endpoint criticos
-use sistema_login_user4;
+use sistema_login_user3;
+
 INSERT INTO `sistema_login_user3`.`roles` (`id`, `nombre`) VALUES ('1', 'ROLE_ADMIN');
 INSERT INTO `sistema_login_user3`.`roles` (`id`, `nombre`) VALUES ('2', 'ROLE_USER');
 
